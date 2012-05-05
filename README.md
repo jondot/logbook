@@ -37,7 +37,7 @@ cover, in this case `The Wizzard of Oz`.
     $ lg book The Wizzard of Oz
 
 
-## Adding lgries
+## Adding things
 
 Simply say 'lg add' and your memory in a short sentence.
 
