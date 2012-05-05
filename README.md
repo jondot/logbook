@@ -1,5 +1,4 @@
-![](https://raw.github.com/jondot/logbook/master/resources/logbook.png)
-
+<img src="https://raw.github.com/jondot/logbook/master/resources/logbook.png" style="width:136px"/>
 Logbook allows you to record memories easily from your command line into
 virtual book(s). Books are simply private Github Gists (backend is
 replaceable).
