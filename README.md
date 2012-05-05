@@ -1,3 +1,4 @@
+![](https://raw.github.com/jondot/logbook/master/resources/logbook.png)
 # Logbook
 
 Logbook allows you to record memories easily from your command line into
