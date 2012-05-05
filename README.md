@@ -69,7 +69,7 @@ Or pick from a menu, leaving arguments blank:
     Pick one: 1
 
 
-## Listing lgries
+## Listing things
 
 Say `lg all` when you want to see everything you've recorded.
 
