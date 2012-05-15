@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Logbook : Logs your thoughts quickly and easily" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Logbook</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jondot/logbook">View on GitHub</a>
+
+          <h1 id="project_title">Logbook</h1>
+          <h2 id="project_tagline">Logs your thoughts quickly and easily</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jondot/logbook/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jondot/logbook/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Logbook allows you to record memories easily from your command line into
+virtual book(s). Books are simply private Github Gists (backend is
+replaceable).</p>
+
+<p>It is heavily inspired from its pythonish friend, <a href="http://maebert.github.com/jrnl">http://maebert.github.com/jrnl</a>.</p>
+
+<p>I built it because I love Ruby, it was easy enough, and I really loved
+the idea of storing as Gists as opposed to plain files.</p>
+
+<h1>Usage</h1>
+
+<p>For brevity's sake, the Logbook gem name and executable is <code>lg</code>.</p>
+
+<pre><code>$ gem install lg
+$ lg
+</code></pre>
+
+<p>If you want private Gists attached to your user (you most probably
+want that), make sure to set your Github credentials as environment
+variables, example:</p>
+
+<pre><code>$ export GITHUB_USER=youruser
+$ export GITHUB_PASSWORD=yourpw
+</code></pre>
+
+<p>Now we need to make a first <code>book</code> and start <code>add</code>ing into it.  </p>
+
+<h2>Setting up a book</h2>
+
+<p>Create a new book with the <code>lg book</code> command. You can give it a
+cover, in this case <code>The Wizzard of Oz</code>.</p>
+
+<pre><code>$ lg book The Wizzard of Oz
+</code></pre>
+
+<h2>Adding things</h2>
+
+<p>Simply say 'lg add' and your memory in a short sentence.</p>
+
+<pre><code>$ lg add just wrote the logbook gem README
+</code></pre>
+
+<p>You might find it convenient to specify when a thing happend explicitly,
+just make sure to specify a natural date such as <code>yesterday</code> separated
+by a colon <code>:</code>. Translation done with the <code>chronic</code> gem.</p>
+
+<pre><code>$ lg add yesterday: wrote the logbook gem README
+</code></pre>
+
+<h2>More</h2>
+
+<p>You can safely skip this if that's all what you're looking for.</p>
+
+<h2>Switching books</h2>
+
+<p>Switch between books, when you know what you want, you can explicitly
+specify the ID.</p>
+
+<pre><code>$ lg book book-id
+</code></pre>
+
+<p>Or pick from a menu, leaving arguments blank:</p>
+
+<pre><code>$ lg book
+1    The Wizzard of Oz   deadbeef0aef
+...
+Pick one: 1
+</code></pre>
+
+<h2>Listing things</h2>
+
+<p>Say <code>lg all</code> when you want to see everything you've recorded.</p>
+
+<h1>Philosophy</h1>
+
+<p>Command line is awesome. Its fast, and you feel it when you're less
+dependent on your mouse for your development work (e.g. VIM).  </p>
+
+<p>You should just Alt/Command-Tab, write a line and go back working.  </p>
+
+<p>You should be expected to remember at most one commands (pitfall of success) to do actual work. Seriously, <a href="http://ezliu.com/focus/">focus</a>.</p>
+
+<h2>There's no search like in jrnl</h2>
+
+<p>Feature slim. Use gist search for that. True, its limited, but as of now, I believe
+Github are working on improving that.  </p>
+
+<p>In actuallity, <code>jrnl</code>'s search loads all of your entries to memory and
+performs search on an in-memory structure.<br>
+If the need arises, it should be dead easy to
+make <em>that</em> kind of search in <code>logbook</code>.</p>
+
+<h2>There's no delete/modify</h2>
+
+<p>Again, feature slim. If you were using a real logbook, you'd
+just cross the bad entry. It will still be there.<br>
+If you must, you can always use the gist interface for that.  </p>
+
+<h2>There's no analytics, let me reap added value from my work!</h2>
+
+<p>Actually, a gist entry is a Git repository.<br>
+The modeling on-top-of a
+Gist was done intentionally. Clone your book and
+treat it like a Git repo.</p>
+
+<p>From there, you can script against git and/or run countless analysis tools on your repository.</p>
+
+<h1>Developers</h1>
+
+<p>Set up development: <code>git clone</code>, <code>bundle install</code>, <code>bundle exec guard start</code>.<br>
+Build/install a development snapshot: <code>rake build</code>, <code>rake install</code>.</p>
+
+<p>Credit: Thanks to <a href="https://github.com/defunkt" class="user-mention">@defunkt</a>!. I've included and heavily modified a version of <a href="https://github.com/defunkt/gist">defunkt/gist</a> in this project.  </p>
+
+<h1>Contributing</h1>
+
+<p>Fork, implement, add tests, pull request, get my everlasting thanks and a respectable place here :).</p>
+
+<h1>Copyright</h1>
+
+<p>Copyright (c) 2012 <a href="http://gplus.to/dotan">Dotan Nahum</a> <a href="http://twitter.com/jondot">@jondot</a>. See MIT-LICENSE for further details.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Logbook maintained by <a href="https://github.com/jondot">jondot</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
