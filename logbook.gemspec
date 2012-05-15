@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Logbook::VERSION
   s.authors     = ["Dotan Nahum"]
   s.email       = ["jondotan@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://jondot.github.com/logbook/"
   s.summary     = %q{log your memories onto virtual logbooks made of Gists}
   s.description = %q{log your memories onto virtual logbooks made of Gists}
 
