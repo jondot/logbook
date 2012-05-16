@@ -9,8 +9,7 @@ It is heavily inspired from its pythonish friend, http://maebert.github.com/jrnl
 I built it because I love Ruby, it was easy enough, and I really loved
 the idea of storing as Gists as opposed to plain files.
 
-[![Build Status](https://secure.travis-ci.org/jondot/logbook.png?branch=master)](http://travis-ci.org/jondot/logbook) [![Dependency Status]
-
+[Build Status](https://secure.travis-ci.org/jondot/logbook.png?branch=master)]
 
 # Usage
 
