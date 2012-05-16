@@ -90,7 +90,7 @@ describe Logbook::CLI do
       u = UserConfig.new(".logbook")
       u['logbook.yaml'][:current_book] = "deadbeef"
       u['logbook.yaml'][:books] = {
-          "deadbeef" => "Captain's log, stardate 3323426-0/1",
+          "deadbeef" => "Captain's log, stardate 3323426-0",
           "c0debabe" => "The log"
         }
       u['logbook.yaml'].save
@@ -125,8 +125,8 @@ describe Logbook::CLI do
       out = capture_io{ Logbook::CLI.start ["book"]}.join ''
       
       lines = out.lines.to_a
-      lines[0].must_match /1     deadbeef  Captain's log, stardate 3323426-0/
-      lines[1].must_match /2     c0debabe  The log/
+      lines[0].must_match /1  deadbeef  Captain's log, stardate 3323426-0\n/
+      lines[1].must_match /2  c0debabe  The log/
       lines[2].must_match /OK, selected/
     end
   end

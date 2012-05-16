@@ -1,13 +1,5 @@
 #!/usr/bin/env ruby
 require "logbook/cli"
 
-
-# banner
-# testing:
-# cli 'all'
-# pr:
-# logo
-#
-
 Logbook::CLI.start
 
