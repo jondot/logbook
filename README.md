@@ -127,6 +127,7 @@ Fork, implement, add tests, pull request, get my everlasting thanks and a respec
 
 # Copyright
 
+
 Copyright (c) 2012 [Dotan Nahum](http://gplus.to/dotan) [@jondot](http://twitter.com/jondot). See MIT-LICENSE for further details.
 
 
